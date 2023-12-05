@@ -27,23 +27,17 @@ namespace Lab4.Persons
             id = idnumber;
         }
 
-        public string GetGender()
-        {
-            return int.Parse(idnumber[9].ToString()) / 2 == 0 ? "Woman" : "Man";
-        }
+        public string GetGender() => int.Parse(idnumber[9].ToString()) % 2 == 0 ? "Woman" : "Man";
 
         public int GetAge()
         {
-            return 1; //DateTime.Now - GetBirthDay()).Days / 365;
+            //return DateTime.Now.Year - GetBirthDay().Year;
+            return (DateTime.Now - IDHelper.GetBirthDay(idnumber)).Days / 365;
         }
 
-        private DateTime GetBirthDay()
-        {
-            var year = int.Parse(idnumber.Substring(0, 2));
-            var month = int.Parse(idnumber.Substring(2, 2));
-            var day = int.Parse(idnumber.Substring(4, 2));
-
-        }
+        public abstract string GetEducationInfo();
+        public abstract string GetFullName();
+        public abstract bool CanGoAloneToHome();
 
     }
 }
