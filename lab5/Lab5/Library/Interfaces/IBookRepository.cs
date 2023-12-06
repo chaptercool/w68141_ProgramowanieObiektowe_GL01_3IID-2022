@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.Interfaces
 {
-    public interface IBookRepository: IBaseRepository<Book, int>
+    public interface IBookRepository: IBaseRepository<Person, int>
     {
         //bb
     }

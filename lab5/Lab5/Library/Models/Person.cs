@@ -9,6 +9,6 @@ namespace Library.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public List<Book> BorrowedBook { get; set; } = new List<Book>();
+        public List<Person> BorrowedBook { get; set; } = new List<Person>();
     }
 }

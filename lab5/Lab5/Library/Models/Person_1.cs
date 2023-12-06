@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    public class Book: IEntity<int>, IHasCreationTime
+    public class Person: IEntity<int>, IHasCreationTime
     {
         public int Id { get; set; }
         public DateTime CreationTime { get; set; }
